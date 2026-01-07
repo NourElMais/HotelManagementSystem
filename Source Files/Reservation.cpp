@@ -1,6 +1,7 @@
 #include "Reservation.h"
 #include <cctype>
 #include <chrono>
+#include <ctime>
 
 int Reservation::nextReservationID = 1;
 
@@ -24,10 +25,9 @@ int daysInMonth(int year, int month) {
 int getCurrentYear() {
     time_t t = time(nullptr);
 
-    tm nowStruct;
-    localtime_s(&nowStruct, &t);  
+    tm* nowStruct = localtime(&t);
 
-    return nowStruct.tm_year + 1900;
+    return nowStruct->tm_year + 1900;
 }
 
 bool isValidDate(const string& date) {

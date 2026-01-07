@@ -27,10 +27,18 @@ A comprehensive C++ console application for managing hotel operations, built wit
 ## Installation & Setup
 
 ### Prerequisites
-- Visual Studio 2022 (or compatible version) with C++ development tools
-- Windows OS
+- C++ compiler (g++, Visual Studio, etc.)
+- Windows OS (or compatible environment)
 
-### Steps
+### Building with Command Line (Recommended for MinGW/bash)
+1. Clone or download the project files
+2. Run the compilation command:
+   ```
+   g++ -I "Header Files" Source\ Files/*.cpp -o main
+   ```
+3. Run the executable: `./main.exe`
+
+### Building with Visual Studio
 1. Clone or download the project files
 2. Open `ProjectFiles.sln` in Visual Studio
 3. Build the solution (F7 or Build > Build Solution)
